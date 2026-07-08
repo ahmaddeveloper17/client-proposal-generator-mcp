@@ -1,0 +1,29 @@
+{
+  "name": "@proposal-generator/server",
+  "version": "1.0.1",
+  "description": "MCP server that turns client requirements into a timeline, tech stack, price estimate, milestones, and a proposal document",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "bin": {
+    "proposal-generator-mcp": "./dist/index.mjs"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": ["mcp", "model-context-protocol", "freelance", "proposal"],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "proposal-generator": {
+      "type": "local",
+      "command": ["bun", "run", "packages/server/dist/index.mjs"],
+      "cwd": ".",
+      "enabled": true
+    }
+  }
+}
