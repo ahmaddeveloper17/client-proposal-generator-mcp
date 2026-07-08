@@ -8,18 +8,18 @@
   "scripts": {
     "build": "bun run --filter @proposal-generator/server build",
     "dev": "bun run --filter @proposal-generator/server dev",
-    "lint": "biome check --write packages/",
-    "lint:check": "biome check packages/",
-    "format": "biome format --write packages/",
-    "format:check": "biome format packages/",
-    "typecheck": "bun run --filter @proposal-generator/server typecheck",
-    "release": "bun run build && bumpp package.json packages/server/package.json && bun publish --filter @proposal-generator/server",
+    "lint": "oxlint packages/ --fix",
+    "lint:check": "oxlint packages/",
+    "format": "oxfmt packages/",
+    "format:check": "oxfmt --check packages/",
+    "typecheck": "tsc --noEmit",
+    "release:pack": "bun run --filter @proposal-generator/server pack:dry",
     "start": "bun run packages/server/dist/index.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
     "@types/node": "^26.1.0",
-    "bumpp": "^10.1.0",
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
     "tsdown": "^0.22.0",
     "typescript": "^5.8.0"
   }
