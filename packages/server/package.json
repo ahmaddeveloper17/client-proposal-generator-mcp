@@ -1,6 +1,6 @@
 {
   "name": "@proposal-generator/server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server that turns client requirements into a timeline, tech stack, price estimate, milestones, and a proposal document",
   "type": "module",
   "main": "./dist/index.mjs",
