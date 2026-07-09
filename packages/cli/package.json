@@ -1,6 +1,6 @@
 {
   "name": "@dev_ahmad_org/proposal-generator-cli",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "CLI client for the proposal-generator — generate freelancing proposals from the terminal",
   "keywords": [
     "cli",
