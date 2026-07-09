@@ -4,12 +4,12 @@ Generate freelancing proposals — tech stack, timeline, price estimate, milesto
 
 ## Tools
 
-| Tool | Returns |
-|---|---|
-| `proposal-generator_generate_proposal` | Full pipeline: JSON summary + Markdown proposal document |
-| `proposal-generator_estimate_price_and_timeline` | Quick estimate: hours, price range, timeline |
-| `proposal-generator_recommend_tech_stack` | Tech stack suggestion based on project type + features |
-| `proposal-generator_list_feature_catalog` | Every recognized feature key with its hour estimate and category |
+| Tool                                             | Returns                                                          |
+| ------------------------------------------------ | ---------------------------------------------------------------- |
+| `proposal-generator_generate_proposal`           | Full pipeline: JSON summary + Markdown proposal document         |
+| `proposal-generator_estimate_price_and_timeline` | Quick estimate: hours, price range, timeline                     |
+| `proposal-generator_recommend_tech_stack`        | Tech stack suggestion based on project type + features           |
+| `proposal-generator_list_feature_catalog`        | Every recognized feature key with its hour estimate and category |
 
 ## Usage
 
@@ -36,7 +36,7 @@ This skill relies on the `@dev_ahmad_org/proposal-generator` MCP server being re
   "mcpServers": {
     "proposal-generator": {
       "command": "bun",
-      "args": ["run", "/path/to/packages/server/dist/index.mjs"]
+      "args": ["run", "@dev_ahmad_org/proposal-generator"]
     }
   }
 }

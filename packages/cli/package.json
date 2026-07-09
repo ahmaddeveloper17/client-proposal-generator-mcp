@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "proposal-gen": "./dist/index.mjs"
+    "proposal-gen": "./dist/index.js"
   },
   "files": [
     "dist"
