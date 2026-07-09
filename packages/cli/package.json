@@ -1,6 +1,6 @@
 {
   "name": "@dev_ahmad_org/proposal-generator-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI client for the proposal-generator — generate freelancing proposals from the terminal",
   "keywords": [
     "cli",
@@ -29,7 +29,8 @@
   "scripts": {
     "build": "tsdown",
     "prepublishOnly": "bun run build",
-    "preview": "bun run build && node ./dist/index.mjs"
+    "pack:dry": "bun run build && bun pm pack --dry-run",
+    "preview": "bun run build && node ./dist/index.js"
   },
   "dependencies": {
     "@dev_ahmad_org/proposal-generator": "workspace:*",

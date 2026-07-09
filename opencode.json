@@ -3,7 +3,7 @@
   "mcp": {
     "proposal-generator": {
       "type": "local",
-      "command": ["bun", "run", "packages/server/dist/index.mjs"],
+      "command": ["bun", "x", "-y", "@dev_ahmad_org/proposal-generator"],
       "cwd": ".",
       "enabled": true
     }
