@@ -1,0 +1,43 @@
+{
+  "name": "@dev_ahmad_org/proposal-generator-cli",
+  "version": "1.0.0",
+  "description": "CLI client for the proposal-generator — generate freelancing proposals from the terminal",
+  "keywords": [
+    "cli",
+    "estimator",
+    "freelance",
+    "proposal"
+  ],
+  "license": "MIT",
+  "bin": {
+    "proposal-gen": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepublishOnly": "bun run build",
+    "preview": "bun run build && node ./dist/index.mjs"
+  },
+  "dependencies": {
+    "@dev_ahmad_org/proposal-generator": "workspace:*",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.0",
+    "typescript": "^5.8.0"
+  }
+}

@@ -88,7 +88,11 @@ server.registerTool(
       techStack,
       timeline: est.timelineWeeks,
       totalHours: est.totalHours,
-      rateRange: { low: est.rate.low, high: est.rate.high, region: est.rate.region },
+      rateRange: {
+        low: est.rate.low,
+        high: est.rate.high,
+        region: est.rate.region,
+      },
       priceEstimate: est.price,
       milestones: milestones.map((m) => ({
         name: m.name,
@@ -151,7 +155,9 @@ server.registerTool(
     const input = toInput(args);
     const est = estimate(input);
     const techStack = recommendTechStack(input, est);
-    return { content: [{ type: "text", text: JSON.stringify({ techStack }, null, 2) }] };
+    return {
+      content: [{ type: "text", text: JSON.stringify({ techStack }, null, 2) }],
+    };
   },
 );
 
@@ -164,7 +170,9 @@ server.registerTool(
     inputSchema: {},
   },
   async () => {
-    return { content: [{ type: "text", text: JSON.stringify(FEATURE_CATALOG, null, 2) }] };
+    return {
+      content: [{ type: "text", text: JSON.stringify(FEATURE_CATALOG, null, 2) }],
+    };
   },
 );
 

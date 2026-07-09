@@ -6,15 +6,19 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "bun run --filter @proposal-generator/server build",
-    "dev": "bun run --filter @proposal-generator/server dev",
+    "build": "bun run --filter @dev_ahmad_org/proposal-generator build && bun run --filter @dev_ahmad_org/proposal-generator-cli build",
+    "build:server": "bun run --filter @dev_ahmad_org/proposal-generator build",
+    "build:cli": "bun run --filter @dev_ahmad_org/proposal-generator-cli build",
+    "dev": "bun run --filter @dev_ahmad_org/proposal-generator dev",
     "lint": "oxlint packages/ --fix",
     "lint:check": "oxlint packages/",
     "format": "oxfmt packages/",
     "format:check": "oxfmt --check packages/",
     "typecheck": "tsc --noEmit",
-    "release:pack": "bun run --filter @proposal-generator/server pack:dry",
-    "start": "bun run packages/server/dist/index.mjs"
+    "release:pack": "bun run --filter @dev_ahmad_org/proposal-generator pack:dry",
+    "release:pack:cli": "bun run --filter @dev_ahmad_org/proposal-generator-cli pack:dry",
+    "start": "bun run packages/server/dist/index.mjs",
+    "preview": "bun run --filter @dev_ahmad_org/proposal-generator-cli preview"
   },
   "devDependencies": {
     "@types/node": "^26.1.0",

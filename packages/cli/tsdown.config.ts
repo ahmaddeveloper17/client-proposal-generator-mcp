@@ -1,7 +1,7 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  entry: ["./src/index.ts", "./src/exports.ts"],
+  entry: ["./src/index.ts"],
   format: "esm",
   target: "node22",
   dts: true,
@@ -9,4 +9,7 @@ export default defineConfig({
   outDir: "./dist",
   minify: false,
   sourcemap: true,
+  deps: {
+    neverBundle: ["@dev_ahmad_org/proposal-generator"],
+  },
 });

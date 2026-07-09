@@ -1,5 +1,5 @@
 {
-  "name": "@proposal-generator",
+  "name": "@dev_ahmad_org/proposal-generator",
   "version": "1.0.2",
   "description": "MCP server that turns client requirements into a timeline, tech stack, price estimate, milestones, and a proposal document",
   "keywords": [
@@ -21,6 +21,10 @@
     ".": {
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.mts"
+    },
+    "./exports": {
+      "import": "./dist/exports.mjs",
+      "types": "./dist/exports.d.mts"
     }
   },
   "publishConfig": {
