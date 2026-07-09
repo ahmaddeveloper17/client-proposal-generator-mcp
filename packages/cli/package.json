@@ -1,6 +1,6 @@
 {
   "name": "@dev_ahmad_org/proposal-generator-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI client for the proposal-generator — generate freelancing proposals from the terminal",
   "keywords": [
     "cli",
@@ -16,11 +16,11 @@
     "dist"
   ],
   "type": "module",
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "publishConfig": {
