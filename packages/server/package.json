@@ -1,6 +1,6 @@
 {
   "name": "@dev_ahmad_org/proposal-generator",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "MCP server that turns client requirements into a timeline, tech stack, price estimate, milestones, and a proposal document",
   "keywords": [
     "freelance",
@@ -10,21 +10,21 @@
   ],
   "license": "MIT",
   "bin": {
-    "proposal-generator-mcp": "./dist/index.mjs"
+    "proposal-generator-mcp": "./dist/index.js"
   },
   "files": [
     "dist"
   ],
   "type": "module",
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.mts"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./exports": {
-      "import": "./dist/exports.mjs",
-      "types": "./dist/exports.d.mts"
+      "import": "./dist/exports.js",
+      "types": "./dist/exports.d.ts"
     }
   },
   "publishConfig": {
